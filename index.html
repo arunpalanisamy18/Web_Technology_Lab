@@ -3,500 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Web Technology Laboratory</title>
+<title>Web Technology Lab</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
 
 body{
-
-background:#eef2f7;
-
-}
-
-header{
-
-background:linear-gradient(135deg,#0d47a1,#1976d2);
-color:white;
-padding:35px 20px;
-text-align:center;
-
-}
-
-header h1{
-
-font-size:38px;
-margin-bottom:10px;
-
-}
-
-header p{
-
-font-size:18px;
-
+    background:#f4f6f9;
 }
 
 .container{
-
-width:90%;
-max-width:1200px;
-margin:35px auto;
-
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
 }
 
-.profile{
-
-background:white;
-border-radius:12px;
-padding:25px;
-box-shadow:0 5px 15px rgba(0,0,0,.15);
-margin-bottom:35px;
-
+header{
+    text-align:center;
+    margin-bottom:35px;
 }
 
-.profile h2{
-
-color:#0d47a1;
-margin-bottom:20px;
-
+header h1{
+    color:#1565c0;
+    margin-bottom:10px;
 }
 
-table{
-
-width:100%;
-border-collapse:collapse;
-
-}
-
-table td{
-
-padding:12px;
-border-bottom:1px solid #ddd;
-font-size:17px;
-
-}
-
-table td:first-child{
-
-font-weight:bold;
-width:220px;
-
-}
-
-.section-title{
-
-font-size:30px;
-color:#0d47a1;
-margin-bottom:25px;
-text-align:center;
-
-}
-
-.cards{
-
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-gap:25px;
-
+header p{
+    color:#555;
+    font-size:17px;
 }
 
 .card{
-
-background:white;
-border-radius:12px;
-overflow:hidden;
-box-shadow:0 5px 12px rgba(0,0,0,.15);
-transition:.3s;
-
+    background:white;
+    border-radius:8px;
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+    padding:18px 22px;
+    margin-bottom:18px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
 
-.card:hover{
-
-transform:translateY(-6px);
-
+.card h2{
+    color:#1565c0;
+    font-size:22px;
+    margin-bottom:6px;
 }
 
-.card-header{
-
-background:#1565c0;
-color:white;
-padding:18px;
-text-align:center;
-font-size:23px;
-font-weight:bold;
-
-}
-
-.card-body{
-
-padding:22px;
-
-}
-
-.card-body p{
-
-margin-bottom:10px;
-line-height:1.6;
-
-}
-
-.status{
-
-font-weight:bold;
-margin:15px 0;
-
-}
-
-.completed{
-
-color:green;
-
-}
-
-.pending{
-
-color:#888;
-
+.card p{
+    color:#555;
 }
 
 .button{
-
-display:inline-block;
-margin-top:15px;
-padding:12px 24px;
-background:#198754;
-color:white;
-text-decoration:none;
-border-radius:6px;
-font-weight:bold;
-
+    text-decoration:none;
+    background:#1565c0;
+    color:white;
+    padding:10px 18px;
+    border-radius:5px;
+    font-weight:bold;
 }
 
 .button:hover{
-
-background:#146c43;
-
+    background:#0d47a1;
 }
 
 .disabled{
-
-display:inline-block;
-margin-top:15px;
-padding:12px 24px;
-background:#999;
-color:white;
-border-radius:6px;
-text-decoration:none;
-cursor:not-allowed;
-
+    background:#9e9e9e;
+    padding:10px 18px;
+    border-radius:5px;
+    color:white;
 }
 
 footer{
-
-margin-top:50px;
-background:#212529;
-color:white;
-padding:20px;
-text-align:center;
-
+    text-align:center;
+    margin-top:35px;
+    color:#666;
+    font-size:14px;
 }
-
 </style>
 
 </head>
-
 <body>
-
-<header>
-
-<h1>WEB TECHNOLOGY LABORATORY</h1>
-
-<p>Department of Computer Science and Engineering</p>
-
-<p>Karunya Institute of Technology and Sciences</p>
-
-</header>
 
 <div class="container">
 
-<div class="profile">
+<header>
+<h1>WEB TECHNOLOGY LAB</h1>
 
-<h2>Student Information</h2>
+<p>
+Arun Palanisamy A A (URK24CS1169)
+</p>
 
-<table>
+<p>
+B.Tech Computer Science and Engineering
+</p>
 
-<tr>
-<td>Name</td>
-<td>Arun Palanisamy A A</td>
-</tr>
+<p>
+Karunya Institute of Technology and Sciences
+</p>
 
-<tr>
-<td>Register Number</td>
-<td>URK24CS1169</td>
-</tr>
-
-<tr>
-<td>Course</td>
-<td>B.Tech Computer Science and Engineering</td>
-</tr>
-
-<tr>
-<td>Semester</td>
-<td>III</td>
-</tr>
-
-<tr>
-<td>Course Name</td>
-<td>Web Technology Laboratory</td>
-</tr>
-
-<tr>
-<td>GitHub Repository</td>
-<td>
-<a href="https://github.com/arunpalanisamy18/Web_Technology_Lab" target="_blank">
-https://github.com/arunpalanisamy18/Web_Technology_Lab
-</a>
-</td>
-</tr>
-
-</table>
-
-</div>
-
-<h2 class="section-title">Laboratory Experiments</h2>
-
-<div class="cards">
+</header>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 1
-</div>
-
-<div class="card-body">
-
-<p><b>Topic</b></p>
-
+<div>
+<h2>Experiment 1</h2>
 <p>Introduction to HTML</p>
-
-<p class="status completed">
-✔ Completed
-</p>
-
-<a class="button" href="Experiment-1/">
-Open Experiment
-</a>
-
 </div>
 
+<a class="button" href="Experiment-1/index.html">
+Open
+</a>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 2
-</div>
-
-<div class="card-body">
-
-<p><b>Topic</b></p>
-
+<div>
+<h2>Experiment 2</h2>
 <p>Working with HTML5 Forms and Media Elements</p>
+</div>
 
-<p class="status completed">
-✔ Completed
-</p>
-
-<a class="button" href="Experiment-2/2.html">
-Open Experiment
+<a class="button" href="Experiment-2/index.html">
+Open
 </a>
-
-</div>
-
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 3
+<div>
+<h2>Experiment 3</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>CSS Fundamentals</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 4
+<div>
+<h2>Experiment 4</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>Bootstrap</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 5
+<div>
+<h2>Experiment 5</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>JavaScript Basics</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 6
+<div>
+<h2>Experiment 6</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>DOM Manipulation</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 7
+<div>
+<h2>Experiment 7</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>XML</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 8
+<div>
+<h2>Experiment 8</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>AJAX</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 9
+<div>
+<h2>Experiment 9</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>PHP</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <div class="card">
-
-<div class="card-header">
-Experiment 10
+<div>
+<h2>Experiment 10</h2>
+<p>Coming Soon</p>
 </div>
 
-<div class="card-body">
-
-<p>Mini Project</p>
-
-<p class="status pending">
-Coming Soon
-</p>
-
-<span class="disabled">Not Uploaded</span>
-
-</div>
-
-</div>
-
-</div>
-
+<span class="disabled">Not Available</span>
 </div>
 
 <footer>
 
-<p><b>Arun Palanisamy A A</b></p>
-
-<p>URK24CS1169</p>
-
-<p>Web Technology Laboratory Repository</p>
-
-<p>© 2026 Karunya Institute of Technology and Sciences</p>
+Web Technology Laboratory • 2026
 
 </footer>
+
+</div>
 
 </body>
 </html>
