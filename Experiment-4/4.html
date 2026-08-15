@@ -1,0 +1,321 @@
+<!-- URK24CS1169 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 04 - Advanced CSS3</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #eeeeee;
+        }
+
+        .container {
+            width: 900px;
+            margin: auto;
+            background-color: white;
+        }
+
+        header {
+            background-color: #8a2be2;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 10px;
+            font-family: "Times New Roman", serif;
+            font-size: 30px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px black;
+        }
+
+        header p {
+            font-style: italic;
+        }
+
+        nav {
+            background-color: lightblue;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            margin-left: 30px;
+            margin-right: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:link {
+            color: black;
+        }
+
+        nav a:visited {
+            color: purple;
+        }
+
+        nav a:hover {
+            color: white;
+            background-color: purple;
+        }
+
+        nav a:active {
+            color: red;
+        }
+
+        .intro {
+            background-color: #008080;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .intro p {
+            width: 700px;
+            margin: auto;
+            line-height: 25px;
+        }
+
+        .rounded {
+            margin: 25px;
+            padding: 20px;
+            background-color: #e3f2fd;
+            border: 3px solid #1565c0;
+            border-radius: 25px;
+            text-align: center;
+        }
+
+        .rounded h2 {
+            color: #1565c0;
+            text-decoration: underline;
+        }
+
+        .rounded-box {
+            margin: 15px;
+            padding: 15px;
+            background-color: #64b5f6;
+            color: white;
+            border-radius: 15px 30px 20px 5px;
+        }
+
+        .border-image {
+            margin: 25px;
+            padding: 25px;
+            border: 20px solid transparent;
+            border-image: url("mar.jpg") 30 round;
+            text-align: center;
+        }
+
+        .border-image h2 {
+            color: #6a1b9a;
+        }
+
+        .background {
+            height: 250px;
+            margin: 25px;
+            padding: 20px;
+            background-image: url("cp.jpg"), url("mjl.jpg");
+            background-position: right bottom, left top;
+            background-repeat: no-repeat, repeat;
+            background-size: 150px 150px, 100px 100px;
+            text-align: center;
+        }
+
+        .background h2 {
+            color: #00695c;
+            text-shadow: 2px 2px 3px gray;
+        }
+
+        .background p {
+            width: 500px;
+            margin: 50px auto;
+            padding: 15px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        .gradient {
+            margin: 25px;
+            padding: 25px;
+            text-align: center;
+            color: white;
+            background: linear-gradient(to right, #1565c0, #64b5f6);
+            border-radius: 20px;
+        }
+
+        .gradient h2 {
+            text-shadow: 2px 2px 4px black;
+        }
+
+        .form-section {
+            margin: 25px;
+            padding: 20px;
+            background-color: #eeeeee;
+            border-radius: 15px;
+        }
+
+        .form-section h2 {
+            text-align: center;
+            color: #6a1b9a;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        input:focus {
+            border: 3px solid red;
+            background-color: lightgreen;
+        }
+
+        input:required {
+            border: 3px solid blue;
+        }
+
+        input:valid {
+            background-color: lightgreen;
+        }
+
+        input:invalid {
+            background-color: yellow;
+        }
+
+        .table-section {
+            margin: 25px;
+            padding: 20px;
+        }
+
+        .table-section h2 {
+            text-align: center;
+            color: #1565c0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid black;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightblue;
+        }
+
+        tr:nth-child(odd) {
+            background-color: white;
+        }
+
+        footer {
+            background-color: #fbe4d8;
+            padding: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Advanced CSS3</h1>
+            <p>Experiment 04 - Webpage Design Using Advanced CSS3</p>
+        </header>
+
+        <nav>
+            <a href="#">Personal</a>
+            <a href="#">Academic</a>
+            <a href="#">Activity</a>
+            <a href="#">Others</a>
+        </nav>
+
+        <section class="intro">
+            <h2>Advanced CSS3 Properties</h2>
+            <p>
+                This webpage demonstrates advanced CSS3 properties including rounded corners, border images, multiple backgrounds, background size, gradients, shadows and pseudo-classes.
+            </p>
+        </section>
+
+        <section class="rounded">
+            <h2>Rounded Corners</h2>
+            <p>
+                The border-radius property is used to create rounded corners.
+            </p>
+            <div class="rounded-box">
+                This box uses border-radius.
+            </div>
+        </section>
+
+        <section class="border-image">
+            <h2>Border Image</h2>
+            <p>
+                The border-image property allows an image to be used as a border around an element.
+            </p>
+        </section>
+
+        <section class="background">
+            <h2>Multiple Backgrounds</h2>
+            <p>
+                Multiple background images can be applied to one element using background-image. Their position, repeat and size can also be specified separately.
+            </p>
+        </section>
+
+        <section class="gradient">
+            <h2>Gradients and Shadows</h2>
+            <p>
+                CSS3 gradients provide a smooth transition between colors and text shadows provide a shadow effect around text.
+            </p>
+        </section>
+
+        <section class="form-section">
+            <h2>Pseudo Classes</h2>
+
+            <input type="text" placeholder="Enter your name" required>
+            <input type="email" placeholder="Enter your email" required>
+        </section>
+
+        <section class="table-section">
+            <h2>Technology Table</h2>
+
+            <table>
+                <tr>
+                    <th>Technology</th>
+                    <th>Purpose</th>
+                </tr>
+                <tr>
+                    <td>HTML5</td>
+                    <td>Web Structure</td>
+                </tr>
+                <tr>
+                    <td>CSS3</td>
+                    <td>Web Styling</td>
+                </tr>
+                <tr>
+                    <td>JavaScript</td>
+                    <td>Web Interaction</td>
+                </tr>
+                <tr>
+                    <td>PHP</td>
+                    <td>Server-side Development</td>
+                </tr>
+            </table>
+        </section>
+
+        <footer>
+            <p>Karunya Institute of Technology and Sciences<br>
+             2026 Web Technology Lab. All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
