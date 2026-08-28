@@ -1,0 +1,33 @@
+<!--URK24CS1169-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Font Size</title>
+</head>
+
+<body>
+
+<h1>Change font size!</h1>
+
+<p id="para"
+   onmouseover="incSize()"
+   onmouseout="decSize()">
+
+Move cursor over me to zoom in...
+
+</p>
+
+<script>
+
+function incSize() {
+    document.getElementById("para").style.fontSize = "28px";
+}
+
+function decSize() {
+    document.getElementById("para").style.fontSize = "18px";
+}
+
+</script>
+
+</body>
+</html>

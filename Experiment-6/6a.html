@@ -1,0 +1,38 @@
+<!--URK24CS1169-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Digital Clock</title>
+</head>
+<body>
+
+<h1>Digital Clock</h1>
+
+<span id="time"></span>
+
+<script>
+
+function display() {
+
+    var d = new Date();
+
+    var hour = d.getHours();
+    var minute = d.getMinutes();
+    var second = d.getSeconds();
+
+    if (hour < 10) hour = "0" + hour;
+    if (minute < 10) minute = "0" + minute;
+    if (second < 10) second = "0" + second;
+
+    document.getElementById("time").innerHTML =
+        hour + ":" + minute + ":" + second;
+}
+
+display();
+
+setInterval(display, 1000);
+
+</script>
+
+</body>
+</html>

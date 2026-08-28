@@ -1,0 +1,63 @@
+<!--URK24CS1169-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+
+<body>
+
+<h1>Student Details</h1>
+
+<div id="output"></div>
+
+<script>
+
+var student = [
+
+    {
+        name: "John",
+        r_num: "123",
+        dob: "20-Apr-1995"
+    },
+
+    {
+        name: "Joseph",
+        r_num: "456",
+        dob: "05-Jan-1998"
+    },
+
+    {
+        name: "David",
+        r_num: "789",
+        dob: "10-Mar-2002"
+    }
+
+];
+
+var output = "";
+
+for (var i = 0; i < student.length; i++) {
+
+    var year = parseInt(student[i].dob.substring(7));
+
+    output += "Name: " + student[i].name + "<br>";
+    output += "Register Number: " + student[i].r_num + "<br>";
+    output += "DOB: " + student[i].dob + "<br>";
+
+    if (year < 2000) {
+        output += "Category: Born before 2000<br>";
+    }
+    else {
+        output += "Category: Born after 2000<br>";
+    }
+
+    output += "<br>";
+}
+
+document.getElementById("output").innerHTML = output;
+
+</script>
+
+</body>
+</html>

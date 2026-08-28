@@ -1,0 +1,59 @@
+<!--URK24CS1169-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Image</title>
+</head>
+
+<body>
+
+<h1>Move Image</h1>
+
+<img src="wow.jpeg"
+     id="img"
+     width="100"
+     height="100">
+
+<br><br>
+
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+
+<script>
+
+var timer;
+
+function init() {
+
+    var imgObj = document.getElementById("img");
+
+    imgObj.style.position = "relative";
+    imgObj.style.left = "0px";
+}
+
+function moveRight() {
+
+    var imgObj = document.getElementById("img");
+
+    imgObj.style.left =
+        parseInt(imgObj.style.left) + 1 + "px";
+
+    timer = setTimeout(moveRight, 20);
+}
+
+function start() {
+    moveRight();
+}
+
+function stop() {
+
+    clearTimeout(timer);
+
+}
+
+window.onload = init;
+
+</script>
+
+</body>
+</html>
