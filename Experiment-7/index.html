@@ -1,132 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiment 7 - Web Technology Lab</title>
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
 
-        body {
-            background-color: #f4f6f8;
-            color: #222;
-            padding: 40px 20px;
-        }
+<meta charset="UTF-8">
 
-        .container {
-            width: 850px;
-            max-width: 100%;
-            margin: auto;
-        }
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-        header {
-            background-color: #1f4e79;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 25px;
-        }
+<title>Experiment 7 - Working with JQuery</title>
 
-        header h1 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
+<style>
 
-        header p {
-            font-size: 16px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        .experiments {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+body{
+    background:#f4f6f9;
+}
 
-        .card {
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 10px;
-            padding: 25px;
-            text-align: center;
-        }
+.container{
+    width:85%;
+    max-width:900px;
+    margin:40px auto;
+}
 
-        .card h2 {
-            color: #1f4e79;
-            margin-bottom: 15px;
-        }
+header{
+    margin-bottom:30px;
+}
 
-        .card p {
-            color: #666;
-            margin-bottom: 20px;
-        }
+header h1{
+    color:#1565c0;
+    margin-bottom:8px;
+    font-size:42px;
+}
 
-        .card a {
-            display: inline-block;
-            background-color: #1f4e79;
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-        }
+header p{
+    color:#444;
+    font-size:18px;
+}
 
-        .card a:hover {
-            background-color: #163a5c;
-        }
+hr{
+    margin:25px 0;
+}
 
-        footer {
-            margin-top: 25px;
-            padding: 20px;
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            color: #666;
-        }
+.card{
 
-        @media (max-width: 700px) {
-            .experiments {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    background:white;
+    padding:22px;
+    margin-bottom:18px;
+    border-radius:8px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.12);
+
+}
+
+.card:hover{
+
+    transform:translateY(-3px);
+    transition:.2s;
+
+}
+
+.left h2{
+
+    color:#1565c0;
+    margin-bottom:6px;
+
+}
+
+.left p{
+
+    color:#666;
+
+}
+
+.button{
+
+    text-decoration:none;
+    background:#1565c0;
+    color:white;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+    font-weight:bold;
+
+}
+
+.button:hover{
+
+    background:#0d47a1;
+
+}
+
+.back{
+
+    display:inline-block;
+    margin-bottom:25px;
+
+    text-decoration:none;
+    color:#1565c0;
+    font-weight:bold;
+
+}
+
+footer{
+
+    text-align:center;
+    margin-top:35px;
+
+    color:#777;
+    font-size:14px;
+
+}
+
+</style>
+
 </head>
+
+
 <body>
-    <div class="container">
-        <header>
-            <h1>Web Technology Lab</h1>
-            <p>Experiment 7</p>
-            <p>Karunya Institute of Technology and Sciences</p>
-        </header>
 
-        <section class="experiments">
-            <div class="card">
-                <h2>Exercise 7A</h2>
-                <p>View the first HTML exercise.</p>
-                <a href="1.html">Open 1.html</a>
-            </div>
+<div class="container">
 
-            <div class="card">
-                <h2>Exercise 7B</h2>
-                <p>View the second HTML exercise.</p>
-                <a href="2.html">Open 2.html</a>
-            </div>
 
-            <div class="card">
-                <h2>Exercise 7C</h2>
-                <p>View the third HTML exercise.</p>
-                <a href="3.html">Open 3.html</a>
-            </div>
-        </section>
+<a href="../index.html" class="back">
+    ← Back to Home
+</a>
 
-        <footer>
-            <p>URK24CS1169 - Web Technology Lab</p>
-            <p>&copy; 2026 All Rights Reserved.</p>
-        </footer>
-    </div>
+
+<header>
+
+<h1>
+    Experiment 7 : Working with JQuery
+</h1>
+
+<p>
+    <strong>Student ID :</strong> URK24CS1169
+</p>
+
+<hr>
+
+</header>
+
+
+<div class="card">
+
+<div class="left">
+
+<h2>Exercise 7A</h2>
+
+<p>
+    Budget Calculator
+</p>
+
+</div>
+
+<a class="button" href="6a.html">
+    Open
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="left">
+
+<h2>Exercise 7B</h2>
+
+<p>
+    Cake Order Caclculations
+</p>
+
+</div>
+
+<a class="button" href="6b.html">
+    Open
+</a>
+
+</div>
+
+
+<div class="card">
+
+<div class="left">
+
+<h2>Exercise 7C</h2>
+
+<p>
+    Car Body Workshop
+</p>
+
+</div>
+
+<a class="button" href="6c.html">
+    Open
+</a>
+
+</div>
+
+
+<footer>
+
+Web Technology Laboratory • Experiment 7
+
+</footer>
+
+
+</div>
+
 </body>
+
 </html>
