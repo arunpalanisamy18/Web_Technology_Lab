@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 7 - Web Technology Lab</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f8;
+            color: #222;
+            padding: 40px 20px;
+        }
+
+        .container {
+            width: 850px;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        header {
+            background-color: #1f4e79;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+        }
+
+        .experiments {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .card h2 {
+            color: #1f4e79;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            display: inline-block;
+            background-color: #1f4e79;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .card a:hover {
+            background-color: #163a5c;
+        }
+
+        footer {
+            margin-top: 25px;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            color: #666;
+        }
+
+        @media (max-width: 700px) {
+            .experiments {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Web Technology Lab</h1>
+            <p>Experiment 7</p>
+            <p>Karunya Institute of Technology and Sciences</p>
+        </header>
+
+        <section class="experiments">
+            <div class="card">
+                <h2>Exercise 7A</h2>
+                <p>View the first HTML exercise.</p>
+                <a href="1.html">Open 1.html</a>
+            </div>
+
+            <div class="card">
+                <h2>Exercise 7B</h2>
+                <p>View the second HTML exercise.</p>
+                <a href="2.html">Open 2.html</a>
+            </div>
+
+            <div class="card">
+                <h2>Exercise 7C</h2>
+                <p>View the third HTML exercise.</p>
+                <a href="3.html">Open 3.html</a>
+            </div>
+        </section>
+
+        <footer>
+            <p>URK24CS1169 - Web Technology Lab</p>
+            <p>&copy; 2026 All Rights Reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
