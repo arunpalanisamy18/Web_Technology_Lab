@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            padding: 30px 15px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            font-family: Arial, sans-serif;
+            color: #172033;
+            background: linear-gradient(
+                135deg,
+                #e9e7ff,
+                #f1f5f9,
+                #dff5ff
+            );
+        }
+
+        .card {
+            width: 100%;
+            max-width: 735px;
+            margin: 15px auto;
+            padding: 30px 35px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(23, 37, 84, 0.1);
+        }
+
+        .tag {
+            text-align: center;
+            color: #6366f1;
+            font-size: 11px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        h1 {
+            margin: 20px 0;
+            text-align: center;
+            color: #273778;
+            font-size: 30px;
+        }
+
+        .subtitle {
+            margin-bottom: 25px;
+            text-align: center;
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: 165px 1fr;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 11px;
+        }
+
+        .row > label {
+            font-size: 16px;
+        }
+
+        input:not([type="radio"]):not([type="checkbox"]),
+        select {
+            width: 100%;
+            min-width: 0;
+            height: 42px;
+            padding: 9px 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 7px;
+            background: white;
+            font: inherit;
+        }
+
+        input:focus,
+        select:focus {
+            outline: 2px solid #c7d2fe;
+            border-color: #6366f1;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .options label {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            accent-color: #4f46e5;
+        }
+
+        .spaced {
+            margin-top: 25px;
+        }
+
+        button,
+        .button {
+            display: block;
+            width: fit-content;
+            min-width: 120px;
+            margin: 35px auto 0;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 7px;
+            background: linear-gradient(100deg, #4f46e5, #6366f1);
+            color: white;
+            font-size: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        button:hover,
+        .button:hover {
+            filter: brightness(1.08);
+        }
+
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            color: #64748b;
+            font-size: 11px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 25px;
+            border-collapse: collapse;
+            font-size: 15px;
+        }
+
+        th,
+        td {
+            padding: 13px;
+            border: 1px solid #e2e8f0;
+            text-align: left;
+            overflow-wrap: anywhere;
+        }
+
+        th {
+            width: 36%;
+            background: #f8fafc;
+            color: #334155;
+        }
+
+        @media (max-width: 560px) {
+            .card {
+                padding: 22px 17px;
+            }
+
+            h1 {
+                font-size: 25px;
+            }
+
+            .row {
+                grid-template-columns: 1fr;
+                gap: 7px;
+            }
+
+            .spaced {
+                margin-top: 15px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 9px 7px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main class="card">
+        <p class="tag">EXPERIMENT 10 · NODE.JS + MONGODB</p>
+
+        <h1>User Registration Form</h1>
+
+        <p class="subtitle">
+            Enter your details to register.
+        </p>
+
+        <form action="/server" method="POST">
+
+            <div class="row">
+                <label for="name">Name:</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                >
+            </div>
+
+            <div class="row">
+                <label for="password">Password:</label>
+                <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    required
+                >
+            </div>
+
+            <div class="row">
+                <label for="age">Age:</label>
+                <input
+                    id="age"
+                    name="age"
+                    type="number"
+                    min="1"
+                    required
+                >
+            </div>
+
+            <div class="row">
+                <label for="mobile">Mobile Number:</label>
+                <input
+                    id="mobile"
+                    name="mobile"
+                    type="tel"
+                    pattern="[0-9]{10}"
+                    maxlength="10"
+                    required
+                >
+            </div>
+
+            <div class="row">
+                <label for="email">Email:</label>
+                <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                >
+            </div>
+
+            <div class="row">
+                <label>Gender:</label>
+
+                <div class="options">
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Male"
+                            required
+                        >
+                        Male
+                    </label>
+
+                    <label>
+                        <input
+                            type="radio"
+                            name="gender"
+                            value="Female"
+                        >
+                        Female
+                    </label>
+                </div>
+            </div>
+
+            <div class="row spaced">
+                <label for="state">State:</label>
+
+                <select id="state" name="state" required>
+                    <option value="">Select State</option>
+                    <option>Tamil Nadu</option>
+                    <option>Kerala</option>
+                    <option>Karnataka</option>
+                    <option>Andhra Pradesh</option>
+                    <option>Telangana</option>
+                    <option>Maharashtra</option>
+                    <option>Other</option>
+                </select>
+            </div>
+
+            <div class="row spaced">
+                <label>Skills:</label>
+
+                <div class="options">
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="JavaScript"
+                        >
+                        JavaScript
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Python"
+                        >
+                        Python
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="C++"
+                        >
+                        C++
+                    </label>
+
+                    <label>
+                        <input
+                            type="checkbox"
+                            name="skills"
+                            value="Java"
+                        >
+                        Java
+                    </label>
+                </div>
+            </div>
+
+            <button type="submit">
+                Submit Registration
+            </button>
+
+        </form>
+
+        <footer>
+            Powered by Node.js · Express · MongoDB
+        </footer>
+    </main>
+</body>
+</html>
