@@ -1,11 +1,4 @@
-Microsoft Windows [Version 10.0.26200.9457]
-(c) Microsoft Corporation. All rights reserved.
-
-C:\Users\KEERTHI>use collegeDB
-'use' is not recognized as an internal or external command,
-operable program or batch file.
-
-C:\Users\KEERTHI>mongosh
+C:\Users\hp>mongosh
 Current Mongosh Log ID: 6abe9cc0cfd76cddcc4acdfc
 Connecting to:          mongodb://127.0.0.1:27017/?directConnection=true&serverSelectionTimeoutMS=2000&appName=mongosh+2.12.0
 Using MongoDB:          9.0.2
