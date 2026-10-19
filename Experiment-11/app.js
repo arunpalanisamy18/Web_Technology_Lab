@@ -1,0 +1,109 @@
+
+const express = require("express");
+const mongoose = require("mongoose");
+
+const app = express();
+app.use(express.json());
+
+// Connect to MongoDB
+mongoose
+  .connect("mongodb://127.0.0.1:27017/studentdb")
+  .then(() => console.log("MongoDB Connected Successfully"))
+  .catch((error) =>
+    console.log("Database Connection Error:", error.message)
+  );
+
+// Student schema
+const studentSchema = new mongoose.Schema({
+  regNo: { type: String, required: true, unique: true },
+  name: { type: String, required: true },
+  department: { type: String, required: true },
+  email: { type: String },
+  cgpa: { type: Number },
+});
+
+const Student = mongoose.model("Student", studentSchema);
+
+// Home route
+app.get("/", (req, res) => {
+  res.send("NodeJS MongoDB Application is Running");
+});
+
+// CREATE: Add student
+app.post("/students", async (req, res) => {
+  try {
+    const student = new Student(req.body);
+    const savedStudent = await student.save();
+    res.status(201).json(savedStudent);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+// READ: Get all students
+app.get("/students", async (req, res) => {
+  try {
+    const students = await Student.find();
+    res.json(students);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// READ: Get one student by register number
+app.get("/students/:regNo", async (req, res) => {
+  try {
+    const student = await Student.findOne({
+      regNo: req.params.regNo,
+    });
+
+    if (!student) {
+      return res.status(404).json({ message: "Student not found" });
+    }
+
+    res.json(student);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// UPDATE: Modify student
+app.put("/students/:regNo", async (req, res) => {
+  try {
+    const student = await Student.findOneAndUpdate(
+      { regNo: req.params.regNo },
+      req.body,
+      { new: true, runValidators: true }
+    );
+
+    if (!student) {
+      return res.status(404).json({ message: "Student not found" });
+    }
+
+    res.json(student);
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+});
+
+// DELETE: Remove student
+app.delete("/students/:regNo", async (req, res) => {
+  try {
+    const student = await Student.findOneAndDelete({
+      regNo: req.params.regNo,
+    });
+
+    if (!student) {
+      return res.status(404).json({ message: "Student not found" });
+    }
+
+    res.json({ message: "Student deleted successfully" });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Start server
+app.listen(3000, () => {
+  console.log("Server running at http://localhost:3000");
+});
