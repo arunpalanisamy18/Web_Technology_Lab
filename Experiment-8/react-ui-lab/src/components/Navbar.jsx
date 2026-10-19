@@ -30,14 +30,6 @@ export default function Navbar({
       </nav>
 
       <div className="nav-actions">
-        <input
-          className="search-input"
-          type="search"
-          placeholder="Search courses..."
-          value={search}
-          onChange={(event) => setSearch(event.target.value)}
-          aria-label="Search courses"
-        />
 
         <div className="notification-wrapper">
           <button
@@ -69,7 +61,7 @@ export default function Navbar({
 
         <img
           className="profile-image"
-          src="/pfp.jpg"
+          src={`${import.meta.env.BASE_URL}pfp.jpg`}
           alt="Student profile"
         />
       </div>
