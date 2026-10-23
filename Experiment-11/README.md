@@ -1,6 +1,6 @@
 # Experiment 11 — Database Integration in Node.js using MongoDB
 
-Implementation and testing of CRUD operations using Node.js and MongoDB.
+CRUD operations using Node.js and MongoDB, tested with Postman and verified in MongoDB Compass.
 
 ## Screenshots
 

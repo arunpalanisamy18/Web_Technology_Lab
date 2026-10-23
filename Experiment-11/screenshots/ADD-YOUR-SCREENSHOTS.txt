@@ -1,9 +1,0 @@
-Place your corresponding Experiment 11 screenshot here using this exact filename.
-
-01-create-student.png
-02-get-all-students.png
-03-get-student-by-id.png
-04-update-student.png
-05-delete-student.png
-06-mongodb-student-record.png
-07-mongodb-final-records.png
