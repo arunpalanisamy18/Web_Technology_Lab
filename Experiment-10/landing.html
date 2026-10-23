@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experiment 10 | Web Technology Laboratory</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 48px 20px;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #1f2937;
+      background: #f3f5f8;
+    }
+
+    main {
+      max-width: 970px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 25px;
+      color: #1769c2;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      color: #1769c2;
+      font-size: clamp(28px, 4vw, 38px);
+    }
+
+    .subtitle {
+      margin: 0 0 32px;
+      color: #536174;
+      line-height: 1.7;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 28px;
+      min-height: 265px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.10);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
+    }
+
+    .icon {
+      display: grid;
+      place-items: center;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 18px;
+      border-radius: 10px;
+      background: #e8f1ff;
+      font-size: 24px;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      color: #1769c2;
+      font-size: 23px;
+    }
+
+    .card p {
+      flex: 1;
+      margin: 0 0 24px;
+      color: #536174;
+      line-height: 1.65;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      color: #fff;
+      background: #1769c2;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #10549e;
+    }
+
+    footer {
+      margin-top: 36px;
+      color: #536174;
+      font-size: 14px;
+    }
+
+    @media (max-width: 650px) {
+      body {
+        padding: 28px 16px;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .card {
+        min-height: 230px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <a class="back" href="../">← Back to All Experiments</a>
+
+    <h1>Experiment 10</h1>
+
+    <p class="subtitle">
+      HTML Form Request Handling Using Node.js and MongoDB.
+      Choose an option below to explore the source code or view the interface.
+    </p>
+
+    <section class="cards">
+      <article class="card">
+        <div class="icon">📁</div>
+
+        <h2>Source Code &amp; README</h2>
+
+        <p>
+          Explore the application files, project documentation,
+          registration workflow, and MongoDB verification screenshots.
+        </p>
+
+        <a
+          class="button"
+          href="https://github.com/arunpalanisamy18/Web_Technology_Lab/tree/main/Experiment-10"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Repository
+        </a>
+      </article>
+
+      <article class="card">
+        <div class="icon">📝</div>
+
+        <h2>Registration Form Demo</h2>
+
+        <p>
+          View the user registration interface created for this
+          experiment.
+        </p>
+
+        <a class="button" href="./demo/">
+          Open Demo
+        </a>
+      </article>
+    </section>
+
+    <footer>
+      Web Technology Laboratory · 2026
+    </footer>
+  </main>
+</body>
+</html>
